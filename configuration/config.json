@@ -1,0 +1,35 @@
+{
+  "environment": "LOCAL",
+  "tracing_service_name": "CCG-API",
+  "tracing_oc_agent_host": "localhost:55678",
+  "dbConnectionPool": {
+    "maxOpenConnections": 0,
+    "maxIdleConnections": 0,
+    "maxConnectionLifetimeMinutes": 0
+  },
+  "email": {
+    "smtp_host":  "smtp.gola.xyz",
+    "smtp_port": 25,
+    "username":  "",
+    "insecure_skip_verify": true,
+    "valid_mensuvadi_email_domains":  [
+      "gola.xyz"
+    ],
+    "default_mensuvadi_email_sender": "gola@gola.xyz",
+    "unsupported_attachment_extensions":  [
+      "exe"
+    ],
+    "permissible_attachment_size_in_bytes": 9437184,
+    "base_template_file_path":  "email_templates/base_email_template.html",
+    "logo_urls": {
+      "mensuvadi": "",
+      "facebook":"",
+      "instagram": "",
+      "twitter":"",
+      "linkedin": "",
+      "download_ios":"",
+      "download_android": "",
+      "help_center_url":""
+    }
+  }
+}
