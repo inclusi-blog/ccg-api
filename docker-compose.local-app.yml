@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  ccg-api:
+    image: ccg-api
+    build:
+      context: .
+      dockerfile: infrastructure/Dockerfile
+    ports:
+      - "30003:8081"
+    environment:
+      - GO111MODULE=on
+      - GOSUMDB=off
+    volumes:
+      - ./configuration:/home/gola/configuration
+      - data-volume:/data-volume
+    command: ["/bin/sh" , "-c", "sleep 5 && /home/gola/ccg-api"]
+
+volumes:
+  data-volume:
+
+networks:
+  default:
+    external:
+      name: gola-network

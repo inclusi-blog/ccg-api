@@ -1,21 +1,12 @@
 package configuration
 
-import (
-	"github.com/gola-glitch/gola-utils/model"
-)
-
 type ConfigData struct {
 	Environment        string                       `json:"environment"`
 	Email              Email                        `json:"email"`
 	OpenTracingUrl     string                       `json:"open_tracing_url"`
 	TracingServiceName string                       `json:"tracing_service_name" binding:"required"`
 	TracingOCAgentHost string                       `json:"tracing_oc_agent_host" binding:"required"`
-	DBConnectionPool   model.DBConnectionPoolConfig `json:"dbConnectionPool" binding:"required"`
 	LogLevel           string                       `json:"log_level" binding:"required"`
-}
-
-func (configData *ConfigData) GetDBConnectionPoolConfig() model.DBConnectionPoolConfig {
-	return configData.DBConnectionPool
 }
 
 type Email struct {

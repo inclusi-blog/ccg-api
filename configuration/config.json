@@ -2,11 +2,6 @@
   "environment": "LOCAL",
   "tracing_service_name": "CCG-API",
   "tracing_oc_agent_host": "localhost:55678",
-  "dbConnectionPool": {
-    "maxOpenConnections": 0,
-    "maxIdleConnections": 0,
-    "maxConnectionLifetimeMinutes": 0
-  },
   "email": {
     "smtp_host":  "smtp.gola.xyz",
     "smtp_port": 25,
