@@ -18,9 +18,9 @@ type EmailController interface {
 }
 
 type emailController struct {
-	config                   configuration2.EmailClientConfig
-	service                  EmailService
-	httpRequestDeserializer  http_util.HttpRequestDeserializer
+	config                  configuration2.EmailClientConfig
+	service                 EmailService
+	httpRequestDeserializer http_util.HttpRequestDeserializer
 }
 
 func NewEmailController(service EmailService, config configuration2.EmailClientConfig) EmailController {
@@ -35,9 +35,9 @@ func NewEmailController(service EmailService, config configuration2.EmailClientC
 		NewTotalAttachmentSizeWithinLimitValidator(config.PermissibleTotalSizeOfAttachments()).Validate)
 
 	return emailController{
-		service:                  service,
-		httpRequestDeserializer:  http_util.NewHttpRequestDeserializer(validate),
-		config:                   config,
+		service:                 service,
+		httpRequestDeserializer: http_util.NewHttpRequestDeserializer(validate),
+		config:                  config,
 	}
 }
 

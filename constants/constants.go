@@ -1,5 +1,5 @@
 package constants
 
 const (
-	FILE_NAME                 = "configuration/config.json"
+	FILE_NAME = "configuration/config.json"
 )

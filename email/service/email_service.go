@@ -82,7 +82,7 @@ func (emailService emailService) embedContentInBaseTemplate(ctx *gin.Context, co
 
 	fields := map[string]interface{}{
 		"LogoUrl": emailService.emailConfig.LogoUrls(),
-		"Urls": emailService.emailConfig.OtherUrls(),
+		"Urls":    emailService.emailConfig.OtherUrls(),
 	}
 	err = finalTemplate.ExecuteTemplate(contentBuffer, "base", fields)
 	if err != nil {

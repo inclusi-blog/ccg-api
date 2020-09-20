@@ -21,12 +21,12 @@ import (
 
 type emailControllerTestSuite struct {
 	suite.Suite
-	mockCtrl                 *gomock.Controller
-	recorder                 *httptest.ResponseRecorder
-	context                  *gin.Context
-	emailService             *mocks.MockEmailService
-	controller               EmailController
-	emailConfig              *mocks.MockEmailClientConfig
+	mockCtrl     *gomock.Controller
+	recorder     *httptest.ResponseRecorder
+	context      *gin.Context
+	emailService *mocks.MockEmailService
+	controller   EmailController
+	emailConfig  *mocks.MockEmailClientConfig
 }
 
 func TestEmailControllerTestSuite(t *testing.T) {
