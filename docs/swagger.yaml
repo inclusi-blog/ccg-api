@@ -1,5 +1,98 @@
+definitions:
+  golaerror.Error:
+    properties:
+      additionalData:
+        type: additionalData
+      errorCode:
+        type: string
+      errorMessage:
+        type: string
+    type: object
+  http_request_response.Attachment:
+    properties:
+      base64_encoded_data:
+        example: base64 encoded value
+        type: string
+      file_name:
+        example: fileName.pdf
+        type: string
+    required:
+    - base64_encoded_data
+    - file_name
+    type: object
+  http_request_response.EmailRequest:
+    properties:
+      attachments:
+        items:
+          $ref: '#/definitions/http_request_response.Attachment'
+        type: array
+      from:
+        example: abc@gola.xyz
+        type: string
+      include_base_template:
+        example: true
+        type: boolean
+      message_body:
+        $ref: '#/definitions/http_request_response.MessageBody'
+        type: object
+      subject:
+        example: base64 encoded value
+        type: string
+      to:
+        example:
+        - abc@gmail.com
+        items:
+          type: string
+        type: array
+    required:
+    - from
+    - message_body
+    - subject
+    - to
+    type: object
+  http_request_response.MessageBody:
+    properties:
+      base64_encoded_content:
+        example: base64 encoded value
+        type: string
+      mime_type:
+        description: Use text/plain as default
+        example: text/html
+        type: string
+    required:
+    - base64_encoded_content
+    type: object
 info:
   contact: {}
   license: {}
-paths: {}
+paths:
+  /api/ccg/v1/email/send:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        API to send email,
+        If IncludeBaseTemplate is true then, header/footer (logos + disclaimer) is included
+      parameters:
+      - description: Email Request
+        in: body
+        name: emailRequest
+        required: true
+        schema:
+          $ref: '#/definitions/http_request_response.EmailRequest'
+      produces:
+      - application/json
+      responses:
+        "204": {}
+        "400":
+          description: If From/To/Subject/Body are empty
+          schema:
+            $ref: '#/definitions/golaerror.Error'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/golaerror.Error'
+      summary: API to send email
+      tags:
+      - Email
 swagger: "2.0"

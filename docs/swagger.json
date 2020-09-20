@@ -4,5 +4,139 @@
         "contact": {},
         "license": {}
     },
-    "paths": {}
+    "paths": {
+        "/api/ccg/v1/email/send": {
+            "post": {
+                "description": "API to send email,\nIf IncludeBaseTemplate is true then, header/footer (logos + disclaimer) is included",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Email"
+                ],
+                "summary": "API to send email",
+                "parameters": [
+                    {
+                        "description": "Email Request",
+                        "name": "emailRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/http_request_response.EmailRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {},
+                    "400": {
+                        "description": "If From/To/Subject/Body are empty",
+                        "schema": {
+                            "$ref": "#/definitions/golaerror.Error"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/golaerror.Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "golaerror.Error": {
+            "type": "object",
+            "properties": {
+                "additionalData": {
+                    "type": "additionalData"
+                },
+                "errorCode": {
+                    "type": "string"
+                },
+                "errorMessage": {
+                    "type": "string"
+                }
+            }
+        },
+        "http_request_response.Attachment": {
+            "type": "object",
+            "required": [
+                "base64_encoded_data",
+                "file_name"
+            ],
+            "properties": {
+                "base64_encoded_data": {
+                    "type": "string",
+                    "example": "base64 encoded value"
+                },
+                "file_name": {
+                    "type": "string",
+                    "example": "fileName.pdf"
+                }
+            }
+        },
+        "http_request_response.EmailRequest": {
+            "type": "object",
+            "required": [
+                "from",
+                "message_body",
+                "subject",
+                "to"
+            ],
+            "properties": {
+                "attachments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/http_request_response.Attachment"
+                    }
+                },
+                "from": {
+                    "type": "string",
+                    "example": "abc@gola.xyz"
+                },
+                "include_base_template": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "message_body": {
+                    "type": "object",
+                    "$ref": "#/definitions/http_request_response.MessageBody"
+                },
+                "subject": {
+                    "type": "string",
+                    "example": "base64 encoded value"
+                },
+                "to": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "abc@gmail.com"
+                    ]
+                }
+            }
+        },
+        "http_request_response.MessageBody": {
+            "type": "object",
+            "required": [
+                "base64_encoded_content"
+            ],
+            "properties": {
+                "base64_encoded_content": {
+                    "type": "string",
+                    "example": "base64 encoded value"
+                },
+                "mime_type": {
+                    "description": "Use text/plain as default",
+                    "type": "string",
+                    "example": "text/html"
+                }
+            }
+        }
+    }
 }

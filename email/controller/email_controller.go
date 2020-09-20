@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"github.com/go-playground/validator/v10/non-standard/validators"
+	"github.com/gola-glitch/gola-utils/golaerror"
 	"github.com/gola-glitch/gola-utils/logging"
 	"net/http"
 )
@@ -57,10 +58,13 @@ func registerFieldLevelValidator(validate *validator.Validate, tagName string, v
 // @Produce  json
 // @Param emailRequest body http_request_response.EmailRequest true "Email Request"
 // @Success 204
-// @Failure 400 {object} errors.CCGError "If From/To/Subject/Body are empty"
-// @Failure 500 {object} errors.CCGError ""
+// @Failure 400 {object} golaerror.Error "If From/To/Subject/Body are empty"
+// @Failure 500 {object} golaerror.Error ""
 // @Router /api/ccg/v1/email/send [post]
 func (controller emailController) SendEmail(ctx *gin.Context) {
+	// for swagger import
+	_ = golaerror.Error{}
+
 	var request http_request_response.EmailRequest
 	if bindError := controller.httpRequestDeserializer.ShouldBindJsonBodyIfValid(&request, ctx); bindError != nil {
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, &constants.PayloadValidationError)
