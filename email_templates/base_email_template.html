@@ -1,0 +1,38 @@
+{{ define "base" }}
+    <html lang="">
+    <body style="display: flex; justify-content: center">
+    <div style="display: flex; align-items: center; flex-direction: column">
+        <div style="width: 1045px; height: 43px;background: #3B3B58;"></div>
+        <div style="height: 110px; width: 1013px; background-image: url(https://cdn.discordapp.com/attachments/757143877487689819/757143944831303750/pattern.svg)"></div>
+        <p style="margin-top: -30px; font-family: Quando,serif;font-style: normal;font-weight: normal;font-size: 48px;line-height: 60px;color: #3B3B58;">
+            Mensuvadi</p>
+        <p style="font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 18px;line-height: 27px;text-align: center;color: #FA163F;">
+            Tamil&#39;s digital footprint</p>
+        <div style="border: 1px none #DEE3ED;border-top-style: solid;border-bottom-style: solid;width: 1013px;display: flex; justify-content: center">
+            {{ template "content" .}}
+        </div>
+        <div style="width: 414px; display: flex; flex-direction: column; justify-content: center; align-items: center">
+            <p style="margin: 0;font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;text-align: center;color: #000000;">
+                Get Mensuvadi on your mobile</p>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 397px">
+                <img src="{{.LogoUrl.DownloadIOS}}" alt="download-ios" width="170" height="57"/>
+                <img src="{{.LogoUrl.DownloadAndroid}}" alt="download-android" width="202" height="57"/>
+            </div>
+            <div style="display: flex;flex-direction: row; width: 357px; justify-content: space-between">
+                <p style="font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 18px;line-height: 27px;text-align: center;color: #3B3B58;margin: 0">
+                    Follow us on</p>
+                <img src="{{.LogoUrl.Facebook}}" alt="facebook-logo" width="34" height="34"/>
+                <img src="{{.LogoUrl.LinkedIn}}" alt="linkedin-logo" width="34" height="34"/>
+                <img src="{{.LogoUrl.Instagram}}" alt="instagram-logo" width="34" height="34"/>
+            </div>
+            <div style="display: flex; flex-direction: row">
+                <a href="{{.Urls.Unsubscribe}}" style="" >Unsubscribe</a> .
+                <a href="{{.Urls.FAQUrl}}" style="" >FAQ</a> .
+                <a href="{{.Urls.PrivacyPolicy}}" style="" >Privacy policy</a> .
+                <a href="{{.Urls.HelpCenter}}" style="" >Help center</a>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+{{ end }}

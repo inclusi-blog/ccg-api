@@ -1,12 +1,12 @@
 package configuration
 
 type ConfigData struct {
-	Environment        string                       `json:"environment"`
-	Email              Email                        `json:"email"`
-	OpenTracingUrl     string                       `json:"open_tracing_url"`
-	TracingServiceName string                       `json:"tracing_service_name" binding:"required"`
-	TracingOCAgentHost string                       `json:"tracing_oc_agent_host" binding:"required"`
-	LogLevel           string                       `json:"log_level" binding:"required"`
+	Environment        string `json:"environment"`
+	Email              Email  `json:"email"`
+	OpenTracingUrl     string `json:"open_tracing_url"`
+	TracingServiceName string `json:"tracing_service_name" binding:"required"`
+	TracingOCAgentHost string `json:"tracing_oc_agent_host" binding:"required"`
+	LogLevel           string `json:"log_level" binding:"required"`
 }
 
 type Email struct {
@@ -20,6 +20,14 @@ type Email struct {
 	PermissibleAttachmentSizeInBytes int      `json:"permissible_attachment_size_in_bytes"`
 	BaseTemplateFilePath             string   `json:"base_template_file_path"`
 	LogoUrls                         LogoUrls `json:"logo_urls"`
+	OtherUrls                        Urls     `json:"urls"`
+}
+
+type Urls struct {
+	HelpCenter    string `json:"help_center_url"`
+	PrivacyPolicy string `json:"privacy_policy_url"`
+	Unsubscribe   string `json:"unsubscribe_url"`
+	FAQUrl        string `json:"faq_url"`
 }
 
 type LogoUrls struct {
@@ -30,5 +38,4 @@ type LogoUrls struct {
 	LinkedIn        string `json:"linkedin"`
 	DownloadIOS     string `json:"download_ios"`
 	DownloadAndroid string `json:"download_android"`
-	HelpCenter      string `json:"help_center_url"`
 }
