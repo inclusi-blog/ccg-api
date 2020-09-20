@@ -39,6 +39,8 @@ func RegisterRouter(router *gin.Engine, configData *configuration.ConfigData) {
 
 	routerGroup := router.Group("/api")
 	{
-		routerGroup.GET("api/ccg/healthz", healthController.GetHealth)
+		routerGroup.GET("/ccg/healthz", healthController.GetHealth)
+		routerGroup.POST("/ccg/v1/email/send", emailController.SendEmail)
 	}
+
 }
