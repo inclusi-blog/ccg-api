@@ -11,21 +11,21 @@
         <div style="border: 1px none #DEE3ED;border-top-style: solid;border-bottom-style: solid;width: 1013px;display: flex; justify-content: center">
             {{ template "content" .}}
         </div>
-        <div style="width: 414px; display: flex; flex-direction: column; justify-content: center; align-items: center">
+        <div style="width: 414px; display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 48px">
             <p style="margin: 0;font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;text-align: center;color: #000000;">
                 Get Mensuvadi on your mobile</p>
-            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 397px">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 397px; margin-top: 24px; margin-bottom: 60px">
                 <img src="{{.LogoUrl.DownloadIOS}}" alt="download-ios" width="170" height="57"/>
                 <img src="{{.LogoUrl.DownloadAndroid}}" alt="download-android" width="202" height="57"/>
             </div>
-            <div style="display: flex;flex-direction: row; width: 357px; justify-content: space-between">
+            <div style="display: flex;flex-direction: row; width: 357px; justify-content: space-between; margin-bottom: 38px;">
                 <p style="font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 18px;line-height: 27px;text-align: center;color: #3B3B58;margin: 0">
                     Follow us on</p>
                 <img src="{{.LogoUrl.Facebook}}" alt="facebook-logo" width="34" height="34"/>
                 <img src="{{.LogoUrl.LinkedIn}}" alt="linkedin-logo" width="34" height="34"/>
                 <img src="{{.LogoUrl.Instagram}}" alt="instagram-logo" width="34" height="34"/>
             </div>
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; width: 414px;justify-content: space-around">
                 <a href="{{.Urls.Unsubscribe}}" style="" >Unsubscribe</a> .
                 <a href="{{.Urls.FAQUrl}}" style="" >FAQ</a> .
                 <a href="{{.Urls.PrivacyPolicy}}" style="" >Privacy policy</a> .
