@@ -9,6 +9,8 @@ services:
       dockerfile: infrastructure/Dockerfile
     ports:
       - "30003:8081"
+    env_file:
+      - docker-compose-local.env
     environment:
       - GO111MODULE=on
       - GOSUMDB=off

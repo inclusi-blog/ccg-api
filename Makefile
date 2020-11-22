@@ -1,6 +1,7 @@
 WORK_DIR = $(shell pwd)
 
 PROJECT := ccg-api
+REVISION := latest
 
 BUILD_VENDOR := git config --global url."https://gola-glitch:2f139c1997392434c4acfd282d8d91d70325ac8f@github.com".insteadOf "https://github.com" && \
                 go env -w GOPRIVATE=github.com/gola-glitch && go mod vendor && chmod -R +w vendor
@@ -29,6 +30,13 @@ start: build
 
 stop:
 	docker-compose -f docker-compose.local-app.yml down -v
+
+dockerize: docker_login
+	docker-compose -f docker-compose.local-app.yml build --no-cache
+
+publish: docker_login
+	docker tag ccg-api $(ARTIFACTORY_USER)/ccg-api:$(REVISION); \
+	docker push $(ARTIFACTORY_USER)/ccg-api:$(REVISION);
 
 clean:
 	chmod -R +w ./.gopath vendor || true
