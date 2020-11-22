@@ -3,9 +3,9 @@
   "tracing_service_name": "CCG-API",
   "tracing_oc_agent_host": "localhost:55678",
   "email": {
-    "smtp_host": "smtp.gola.xyz",
-    "smtp_port": 25,
-    "username": "",
+    "smtp_host": "smtp-relay.sendinblue.com",
+    "smtp_port": 587,
+    "username": "golagolampmp@gmail.com",
     "insecure_skip_verify": true,
     "valid_mensuvadi_email_domains": [
       "gola.xyz"

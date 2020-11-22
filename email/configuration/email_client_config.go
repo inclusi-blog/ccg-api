@@ -46,7 +46,7 @@ func (config emailClientConfig) Username() string {
 }
 
 func (config emailClientConfig) Password() string {
-	return ""
+	return os.Getenv("SMTP_CLIENT_PASSWORD")
 }
 
 func (config emailClientConfig) InsecureSkipVerify() bool {
