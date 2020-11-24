@@ -16,7 +16,13 @@ func main() {
 	configData := LoadConfig()
 	router := CreateRouter(configData)
 	tracing.Init(configData.TracingServiceName, configData.TracingOCAgentHost)
-	err := http.ListenAndServe(":8083", tracing.WithTracing(router, "/api/ccg/healthz"))
+	var port string
+	if configData.Environment == "local" {
+		port = ":8080"
+	} else {
+		port = ":8083"
+	}
+	err := http.ListenAndServe(port, tracing.WithTracing(router, "/api/ccg/healthz"))
 	if err != nil {
 		logging.GetLogger(context.TODO()).Error("Could not start the server", err)
 	}
