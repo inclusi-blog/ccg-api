@@ -18,9 +18,9 @@ func main() {
 	tracing.Init(configData.TracingServiceName, configData.TracingOCAgentHost)
 	var port string
 	if configData.Environment == "local" {
-		port = ":8080"
-	} else {
 		port = ":8083"
+	} else {
+		port = ":8080"
 	}
 	err := http.ListenAndServe(port, tracing.WithTracing(router, "/api/ccg/healthz"))
 	if err != nil {
