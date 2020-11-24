@@ -12,6 +12,8 @@ import (
 )
 
 func RegisterRouter(router *gin.Engine, configData *configuration.ConfigData) {
+	routerGroup := router.Group("/api")
+	routerGroup.GET("/ccg/healthz", healthController.GetHealth)
 	router.Use(middleware.SessionTracingMiddleware)
 	router.Use(request_response_trace.HttpRequestResponseTracingMiddleware([]request_response_trace.IgnoreRequestResponseLogs{
 		{
@@ -37,9 +39,7 @@ func RegisterRouter(router *gin.Engine, configData *configuration.ConfigData) {
 
 	router.GET("api/ccg/v1/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
-	routerGroup := router.Group("/api")
 	{
-		routerGroup.GET("/ccg/healthz", healthController.GetHealth)
 		routerGroup.POST("/ccg/v1/email/send", emailController.SendEmail)
 	}
 
