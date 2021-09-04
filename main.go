@@ -6,6 +6,7 @@ import (
 	"github.com/gola-glitch/gola-utils/logging"
 	"github.com/gola-glitch/gola-utils/tracing"
 	"net/http"
+	"strings"
 )
 
 func main() {
@@ -17,7 +18,7 @@ func main() {
 	router := CreateRouter(configData)
 	tracing.Init(configData.TracingServiceName, configData.TracingOCAgentHost)
 	var port string
-	if configData.Environment == "local" {
+	if strings.EqualFold(configData.Environment, "local") {
 		port = ":8083"
 	} else {
 		port = ":8080"

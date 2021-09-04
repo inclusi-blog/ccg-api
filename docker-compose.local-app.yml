@@ -3,12 +3,13 @@ version: "3.7"
 services:
 
   ccg-api:
+    container_name: ccg-api
     image: ccg-api
     build:
       context: .
       dockerfile: infrastructure/Dockerfile
     ports:
-      - "30003:8081"
+      - "8083:8083"
     env_file:
       - docker-compose-local.env
     environment:
@@ -18,11 +19,13 @@ services:
       - ./configuration:/home/gola/configuration
       - data-volume:/data-volume
     command: ["/bin/sh" , "-c", "sleep 5 && /home/gola/ccg-api"]
+    networks:
+      - gola-network
+
 
 volumes:
   data-volume:
 
 networks:
-  default:
-    external:
-      name: gola-network
+  gola-network:
+    external: true
