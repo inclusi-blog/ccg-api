@@ -17,12 +17,12 @@
     "permissible_attachment_size_in_bytes": 9437184,
     "base_template_file_path": "email_templates/base_email_template.html",
     "logo_urls": {
-      "mensuvadi": "https://cdn.discordapp.com/attachments/757143877487689819/757150084948295730/mensuvadi_logo.svg",
-      "facebook": "https://cdn.discordapp.com/attachments/757143877487689819/757149050280607795/facebook.svg",
-      "instagram": "https://cdn.discordapp.com/attachments/757143877487689819/757149275351285800/instagram.svg",
-      "linkedin": "https://cdn.discordapp.com/attachments/757143877487689819/757149172549025842/linkedin.svg",
-      "download_ios": "https://cdn.discordapp.com/attachments/757143877487689819/757148770159820881/download_ios.svg",
-      "download_android": "https://cdn.discordapp.com/attachments/757143877487689819/757148410854768730/google_play.svg",
+      "mensuvadi": "https://golaimage.s3.ap-south-1.amazonaws.com/static/697dc864b7745817445c731e6a6938af9fe38880.png",
+      "facebook": "https://golaimage.s3.ap-south-1.amazonaws.com/static/a09a8bb21f57ec886002c3260df341fe368eef5e.png",
+      "instagram": "https://golaimage.s3.ap-south-1.amazonaws.com/static/db7284ecc57b45f97270868acbd9aacd51be4335.png",
+      "linkedin": "https://golaimage.s3.ap-south-1.amazonaws.com/static/49fdfcf329f27c994a2ae7db6f994681ab496bd7.png",
+      "download_ios": "https://golaimage.s3.ap-south-1.amazonaws.com/static/5e4b2576cfbf2d7672262a03f35218ea9eb7b2ac.png",
+      "download_android": "https://golaimage.s3.ap-south-1.amazonaws.com/static/42c89d9b3363322d6d1fa4ed871d80b63dca1b99.png",
       "help_center_url": "https://helpcenter.mensuvadi.com"
     },
     "urls": {

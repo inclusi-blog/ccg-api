@@ -1,38 +1,608 @@
 {{ define "base" }}
-    <html lang="">
-    <body style="display: flex; justify-content: center">
-    <div style="display: flex; align-items: center; flex-direction: column">
-        <div style="width: 1045px; height: 43px;background: #3B3B58;"></div>
-        <div style="height: 110px; width: 1013px; background-image: url(https://cdn.discordapp.com/attachments/757143877487689819/757143944831303750/pattern.svg)"></div>
-        <p style="margin-top: -30px; font-family: Quando,serif;font-style: normal;font-weight: normal;font-size: 48px;line-height: 60px;color: #3B3B58;">
-            Mensuvadi</p>
-        <p style="font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 18px;line-height: 27px;text-align: center;color: #FA163F;">
-            Tamil&#39;s digital footprint</p>
-        <div style="border: 1px none #DEE3ED;border-top-style: solid;border-bottom-style: solid;width: 1013px;display: flex; justify-content: center">
-            {{ template "content" .}}
-        </div>
-        <div style="width: 414px; display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 48px">
-            <p style="margin: 0;font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;text-align: center;color: #000000;">
-                Get Mensuvadi on your mobile</p>
-            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 397px; margin-top: 24px; margin-bottom: 60px">
-                <img src="{{.LogoUrl.DownloadIOS}}" alt="download-ios" width="170" height="57"/>
-                <img src="{{.LogoUrl.DownloadAndroid}}" alt="download-android" width="202" height="57"/>
-            </div>
-            <div style="display: flex;flex-direction: row; width: 357px; justify-content: space-between; margin-bottom: 38px;">
-                <p style="font-family: Poppins,serif;font-style: normal;font-weight: normal;font-size: 18px;line-height: 27px;text-align: center;color: #3B3B58;margin: 0">
-                    Follow us on</p>
-                <img src="{{.LogoUrl.Facebook}}" alt="facebook-logo" width="34" height="34"/>
-                <img src="{{.LogoUrl.LinkedIn}}" alt="linkedin-logo" width="34" height="34"/>
-                <img src="{{.LogoUrl.Instagram}}" alt="instagram-logo" width="34" height="34"/>
-            </div>
-            <div style="display: flex; flex-direction: row; width: 414px;justify-content: space-around">
-                <a href="{{.Urls.Unsubscribe}}" style="" >Unsubscribe</a> .
-                <a href="{{.Urls.FAQUrl}}" style="" >FAQ</a> .
-                <a href="{{.Urls.PrivacyPolicy}}" style="" >Privacy policy</a> .
-                <a href="{{.Urls.HelpCenter}}" style="" >Help center</a>
-            </div>
-        </div>
-    </div>
-    </body>
-    </html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    <title>Frame</title>
+    <link href="https://fonts.googleapis.com/css?family=Quando:400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300&display=swap&subset=cyrillic" rel="stylesheet">
+    <!--[if mso]>
+    <style>
+        * {
+            font-family: sans-serif !important;
+        }
+    </style>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <!-- <![endif]-->
+    <style>
+        html {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+
+        td {
+            vertical-align: top;
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <style>
+        @media only screen and (max-device-width: 599px), only screen and (max-width: 599px) {
+
+            .eh {
+                height: auto !important;
+            }
+
+            .desktop {
+                display: none !important;
+                height: 0 !important;
+                margin: 0 !important;
+                max-height: 0 !important;
+                overflow: hidden !important;
+                padding: 0 !important;
+                visibility: hidden !important;
+                width: 0 !important;
+            }
+
+            .mobile {
+                display: block !important;
+                width: auto !important;
+                height: auto !important;
+                float: none !important;
+            }
+
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;">
+<div style="background-color:#e5e5e5;">
+    <!--[if gte mso 9]>
+    <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+        <v:fill type="tile" color="#e5e5e5"/>
+    </v:background>
+    <![endif]-->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td style="background-color:#e5e5e5;border-collapse:separate !important;" valign="top" align="center">
+                <table style="border-collapse:separate !important;margin: 0 auto;" align="center" id="brick_container"
+                       cellspacing="0" cellpadding="0" border="0" width="600" class="email-container">
+                    <tr>
+                        <td>
+                            <table align="center" cellspacing="0" cellpadding="0" border="0" style="margin:auto;">
+                                <tr>
+                                    <td width="600">
+                                        <table cellpadding="0" cellspacing="0" bgcolor="#3b3b58" height="16"
+                                               width="100%"
+                                               style="line-height:16px; height:16px!important;background-color:#3b3b58; border-collapse:separate !important;margin:0 auto;text-align:center;">
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td width="600" bgcolor="#ffffff">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <div style="height:24px;line-height:24px;font-size: 24px; ">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td style="border-collapse:separate !important;">
+                                                                <table cellspacing="0" cellpadding="0" border="0"
+                                                                       width="100%">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table align="center" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td style="border-collapse:separate !important;">
+                                                                                        <table cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0" width="100%">
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <table width="100%"
+                                                                                                           cellspacing="0"
+                                                                                                           cellpadding="0"
+                                                                                                           border="0">
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <table cellspacing="0"
+                                                                                                                       cellpadding="0"
+                                                                                                                       border="0">
+                                                                                                                    <tr>
+                                                                                                                        <td>
+                                                                                                                            <img src="https://golaimage.s3.ap-south-1.amazonaws.com/static/697dc864b7745817445c731e6a6938af9fe38880.png"
+                                                                                                                                 width="48"
+                                                                                                                                 alt=""
+                                                                                                                                 border="0"
+                                                                                                                                 style=" border-radius:0px;  height: auto; margin: auto; display: block;">
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div style="height:16px;line-height:16px;font-size: 16px; ">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                   border="0" width="100%">
+                                                                                <tr>
+                                                                                    <td style=" text-align:center;">
+                                                                                        <div style="line-height:normal">
+                                                                                            <span style="color: #3b3b58;font-family:Quando, Helvetica, Arial, sans-serif; font-size:36px;text-align:center;">Mensuvadi</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                            <div style="height:16px;line-height:16px;font-size:16px;">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="height:24px;line-height:24px;font-size:24px;">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{ template "content" .}}
+                    <tr>
+                        <td>
+                            <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td width="600" bgcolor="#ffffff">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <div style="height:32px;line-height:32px;font-size: 32px; ">&nbsp;
+                                                    </div>
+                                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td style=" text-align:center;">
+                                                                <div style="line-height:normal"><span
+                                                                        style="color: #000000;font-family:Poppins, Helvetica, Arial, sans-serif; font-size:18px;text-align:center;">Get Mensuvadi on your mobile</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="height:32px;line-height:32px;font-size: 32px; ">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td style="border-collapse:separate !important;">
+                                                                <table cellspacing="0" cellpadding="0" border="0"
+                                                                       width="100%">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <img src="{{.LogoUrl.DownloadIOS}}"
+                                                                                                         width="135.25865173339844"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:6px;  height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td>
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td style="padding-left:19px;">
+                                                                                                    <img src="{{.LogoUrl.DownloadAndroid}}"
+                                                                                                         width="160.3240509033203"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:6px;  height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="height:32px;line-height:32px;font-size:32px;">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="height:0px;line-height:0px;font-size: 0px; ">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td width="600" bgcolor="#ffffff">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <div style="height:24px;line-height:24px;font-size: 24px; ">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left:24px;padding-right:24px; ">
+                                                    <table width="100%" align="center" cellspacing="0" cellpadding="0"
+                                                           border="0">
+                                                        <tr>
+                                                            <td width="552"
+                                                                style="border-collapse:separate !important;">
+                                                                <table cellspacing="0" cellpadding="0" border="0"
+                                                                       width="100%">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                   border="0" width="100%">
+                                                                                <tr>
+                                                                                    <td style=" text-align:center;">
+                                                                                        <div style="line-height:20px">
+                                                                                            <span style="color: #414141;line-height:20px;font-family:Poppins, Helvetica, Arial, sans-serif; font-size:15px;text-align:center;font-weight: 300;">© Mensuvadi. All rights reserved. </span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div style="height:8px;line-height:8px;font-size: 8px; ">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                   border="0" width="100%">
+                                                                                <tr>
+                                                                                    <td style=" text-align:center;">
+                                                                                        <div style="line-height:20px">
+                                                                                            <span style="color: #414141;line-height:20px;font-family:Poppins, Helvetica, Arial, sans-serif; font-size:15px;text-align:center;font-weight: 300;">If you have any questions please contact us <a
+                                                                                                    href="{{.Urls.HelpCenter}}">support@mensuvadi.com</a></span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div style="height:8px;line-height:8px;font-size: 8px; ">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                   border="0" width="100%">
+                                                                                <tr>
+                                                                                    <td style=" text-align:center;">
+                                                                                        <div style="line-height:20px">
+                                                                                            <a href="{{.Urls.Unsubscribe}}"
+                                                                                               style="color: #414141;line-height:20px;font-family:Poppins, Helvetica, Arial, sans-serif; font-size:15px;text-align:center;font-weight: 300;">Unsubscribe</a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="height:24px;line-height:24px;font-size: 24px; ">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table align="center" cellspacing="0" cellpadding="0" border="0">
+                                                        <tr>
+                                                            <td width="224" bgcolor="#ffffff">
+                                                                <table cellspacing="0" cellpadding="0" border="0"
+                                                                       width="100%">
+                                                                    <tr>
+                                                                        <td width="32">
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table align="left"
+                                                                                               cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <img src="{{.LogoUrl.Facebook}}"
+                                                                                                         width="32"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:0px; max-width:32px; height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="32">
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table align="left"
+                                                                                               cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td style="padding-left:16px;">
+                                                                                                    <img src="{{.LogoUrl.Instagram}}"
+                                                                                                         width="32"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:0px; max-width:32px; height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="32">
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table align="left"
+                                                                                               cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td style="padding-left:16px;">
+                                                                                                    <img src="{{.LogoUrl.LinkedIn}}"
+                                                                                                         width="32"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:0px; max-width:32px; height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="32">
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table align="left"
+                                                                                               cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td style="padding-left:16px;">
+                                                                                                    <img src="https://golaimage.s3.ap-south-1.amazonaws.com/static/971f72f81e6fdeec166ff073d1d8910d6501c4ea.png"
+                                                                                                         width="32"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:0px; max-width:32px; height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td width="32">
+                                                                            <table width="100%" cellspacing="0"
+                                                                                   cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table align="left"
+                                                                                               cellspacing="0"
+                                                                                               cellpadding="0"
+                                                                                               border="0">
+                                                                                            <tr>
+                                                                                                <td style="padding-left:16px;">
+                                                                                                    <img src="https://golaimage.s3.ap-south-1.amazonaws.com/static/146cc72265e20b208be8cff377da4fbb4a9b8c4f.png"
+                                                                                                         width="32"
+                                                                                                         alt=""
+                                                                                                         border="0"
+                                                                                                         style=" border-radius:0px; max-width:32px; height: auto; margin: auto; display: block;">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="height:24px;line-height:24px;font-size:24px;">&nbsp;
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
 {{ end }}
