@@ -43,4 +43,3 @@ spec:
         {{- range .Values.ingress.appFqdns }}
         - {{ . | quote }}
         {{- end }}
-      secretName: narratenet-tls
