@@ -44,4 +44,4 @@ spec:
         {{- range .Values.ingress.appFqdns }}
         - {{ . | quote }}
         {{- end }}
-      secretName: letsencrypt-nginx
+      secretName: narratenet-tls
