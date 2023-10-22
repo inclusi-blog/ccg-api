@@ -3,8 +3,8 @@ kind: Ingress
 metadata:
   name: {{ include "gola-api.name" . }}-ingress
   annotations:
+    kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    cert-manager.io/cluster-issuer: "letsencrypt-staging"
     nginx.ingress.kubernetes.io/configuration-snippet: |
       add_header X-Content-Type-Options nosniff;
       add_header "X-XSS-Protection" "1;mode=block";
@@ -23,7 +23,6 @@ metadata:
         return 204;
       }
 spec:
-  ingressClassName: nginx
   rules:
       {{- $values := .Values }}
       {{- $apiName := include "gola-api.name" . }}
