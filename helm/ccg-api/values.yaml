@@ -39,7 +39,7 @@ annotations:
     configmap: true
     secret: true
 
-configMountPath: "/home/gola/configuration/"
+configMountPath: "/configuration/config.json"
 
 ingress:
   path: "/api/ccg"

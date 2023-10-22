@@ -33,6 +33,7 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: {{ .Values.configMountPath }}
+              subPath: config.json
           livenessProbe:
             httpGet:
               path: {{ .Values.livenessProbe.httpGet.path }}
