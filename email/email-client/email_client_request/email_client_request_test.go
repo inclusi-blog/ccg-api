@@ -26,7 +26,7 @@ func (suite *emailClientRequestTestSuite) SetupTest() {
 	suite.ctx.Request, _ = http.NewRequest("GET", "", nil)
 }
 
-//noinspection GoNilness
+// noinspection GoNilness
 func (suite *emailClientRequestTestSuite) TestToMessage_ShouldReturnExpectedGomailMessage() {
 	emailClientRequest := EmailClientRequest{
 		From:    "gola@gola.xyz",

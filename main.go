@@ -16,7 +16,7 @@ func main() {
 	logger.Info("Loading configurations")
 	configData := LoadConfig()
 	router := CreateRouter(configData)
-	tracing.Init(configData.TracingServiceName, configData.TracingOCAgentHost)
+	_, _ = tracing.Init(configData.TracingServiceName, configData.TracingOCAgentHost)
 	var port string
 	if strings.EqualFold(configData.Environment, "local") {
 		port = ":8083"

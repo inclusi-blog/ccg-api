@@ -13,7 +13,7 @@ import (
 
 var (
 	healthController = controller.HealthController{}
-	emailController emailControllers.EmailController
+	emailController  emailControllers.EmailController
 )
 
 func Objects(configData *configuration.ConfigData) {
