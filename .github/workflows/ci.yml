@@ -136,7 +136,7 @@ jobs:
           RELEASE_NAME: ccg-api
           NAMESPACE: microservices
           CHART_NAME: ccg-api
-          SMTP_CLIENT_PASSWORD: ${{ DEV_SMTP_CLIENT_PASSWORD }}
+          SMTP_CLIENT_PASSWORD: ${{ secrets.DEV_SMTP_CLIENT_PASSWORD }}
           ENV: dev
         run: |
           sudo mkdir ~/.kube
