@@ -79,7 +79,7 @@ jobs:
   docker:
     needs: [go-build, semgrep, unit-test]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/dev'
+#     if: github.ref == 'refs/heads/dev'
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -112,7 +112,7 @@ jobs:
     needs: [docker]
     environment: dev
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/dev'
+#     if: github.ref == 'refs/heads/dev'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
