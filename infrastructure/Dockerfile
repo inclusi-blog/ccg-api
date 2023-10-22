@@ -1,8 +1,11 @@
-FROM gola05/golang_alpine:latest
+FROM golang:1.18.8-alpine3.16
 
-COPY ./bin/ccg-api /home/gola/ccg-api
-COPY ./email_templates/ /home/gola/email_templates/
+COPY ./bin/ccg-api /ccg-api
+COPY ./email_templates/ /email_templates
 
-WORKDIR /home/gola
+WORKDIR /
 
-CMD ["/home/gola/ccg-api"]
+RUN chmod +x ccg-api
+
+CMD ["/ccg-api"]
+

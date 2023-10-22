@@ -3,7 +3,7 @@ package init
 import (
 	"ccg-api/configuration"
 	"ccg-api/constants"
-	"github.com/gola-glitch/gola-utils/configuration_loader"
+	"github.com/inclusi-blog/gola-utils/configuration_loader"
 )
 
 func LoadConfig() *configuration.ConfigData {

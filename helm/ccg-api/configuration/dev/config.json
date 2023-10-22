@@ -1,0 +1,35 @@
+{
+  "environment": "dev",
+  "tracing_service_name": "CCG-API",
+  "tracing_oc_agent_host": "oc-collector:55678",
+  "email": {
+    "smtp_host": "smtp-relay.sendinblue.com",
+    "smtp_port": 587,
+    "username": "golagolampmp@gmail.com",
+    "insecure_skip_verify": true,
+    "valid_mensuvadi_email_domains": [
+      "gola.xyz"
+    ],
+    "default_mensuvadi_email_sender": "gola@gola.xyz",
+    "unsupported_attachment_extensions": [
+      "exe"
+    ],
+    "permissible_attachment_size_in_bytes": 9437184,
+    "base_template_file_path": "email_templates/base_email_template.html",
+    "logo_urls": {
+      "mensuvadi": "https://cdn.discordapp.com/attachments/757143877487689819/757150084948295730/mensuvadi_logo.svg",
+      "facebook": "https://cdn.discordapp.com/attachments/757143877487689819/757149050280607795/facebook.svg",
+      "instagram": "https://cdn.discordapp.com/attachments/757143877487689819/757149275351285800/instagram.svg",
+      "linkedin": "https://cdn.discordapp.com/attachments/757143877487689819/757149172549025842/linkedin.svg",
+      "download_ios": "https://cdn.discordapp.com/attachments/757143877487689819/757148770159820881/download_ios.svg",
+      "download_android": "https://cdn.discordapp.com/attachments/757143877487689819/757148410854768730/google_play.svg",
+      "help_center_url": "https://helpcenter.mensuvadi.com"
+    },
+    "urls": {
+      "help_center_url": "https://www.google.com",
+      "privacy_policy_url": "https://www.google.com",
+      "unsubscribe_url": "https://www.google.com",
+      "faq_url": "https://www.google.com"
+    }
+  }
+}

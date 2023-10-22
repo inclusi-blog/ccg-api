@@ -2,11 +2,11 @@ version: '3.7'
 services:
 
   build-env:
-    image: gola05/golang_alpine:latest
+    image: golang:1.18.8-alpine3.16
     environment:
       - GO111MODULE=on
       - GOSUMDB=off
-      - GOPRIVATE=github.com/gola-glitch
+      - GOPRIVATE=github.com/inclusi-blog
     volumes:
       - type: volume
         source: ccg_dep

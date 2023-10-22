@@ -8,9 +8,9 @@ import (
 	"ccg-api/email/email-client/email_client_request"
 	"ccg-api/email/models"
 	"github.com/gin-gonic/gin"
-	"github.com/gola-glitch/gola-utils/golaerror"
-	"github.com/gola-glitch/gola-utils/logging"
-	"github.com/gola-glitch/gola-utils/mask_util"
+	"github.com/inclusi-blog/gola-utils/golaerror"
+	"github.com/inclusi-blog/gola-utils/logging"
+	"github.com/inclusi-blog/gola-utils/mask_util"
 	"html/template"
 	"strings"
 )

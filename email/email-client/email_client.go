@@ -3,8 +3,8 @@ package email_client
 import (
 	"ccg-api/email/email-client/email_client_request"
 	"github.com/gin-gonic/gin"
-	"github.com/gola-glitch/gola-utils/logging"
 	"github.com/google/uuid"
+	"github.com/inclusi-blog/gola-utils/logging"
 	"os"
 	"path"
 )

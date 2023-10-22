@@ -3,7 +3,7 @@ package http_request_response
 import (
 	"ccg-api/email/models"
 	"github.com/gin-gonic/gin"
-	"github.com/gola-glitch/gola-utils/logging"
+	"github.com/inclusi-blog/gola-utils/logging"
 )
 
 type EmailRequest struct {

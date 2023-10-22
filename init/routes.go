@@ -4,9 +4,9 @@ import (
 	"ccg-api/configuration"
 	"context"
 	"github.com/gin-gonic/gin"
-	"github.com/gola-glitch/gola-utils/logging"
-	"github.com/gola-glitch/gola-utils/middleware/request_response_trace"
-	middleware "github.com/gola-glitch/gola-utils/middleware/session_trace"
+	"github.com/inclusi-blog/gola-utils/logging"
+	"github.com/inclusi-blog/gola-utils/middleware/request_response_trace"
+	middleware "github.com/inclusi-blog/gola-utils/middleware/session_trace"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
@@ -21,7 +21,7 @@ func RegisterRouter(router *gin.Engine, configData *configuration.ConfigData) {
 			IsRequestLogAllowed:  false,
 			IsResponseLogAllowed: false,
 		},
-	}))
+	}, "api/ccg/healthz", nil, nil))
 
 	golaLoggerRegistry := logging.NewLoggerEntry()
 

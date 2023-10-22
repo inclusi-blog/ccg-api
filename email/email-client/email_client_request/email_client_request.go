@@ -3,7 +3,7 @@ package email_client_request
 import (
 	"ccg-api/email/models"
 	"github.com/gin-gonic/gin"
-	"github.com/gola-glitch/gola-utils/logging"
+	"github.com/inclusi-blog/gola-utils/logging"
 	"gopkg.in/gomail.v2"
 	"io/ioutil"
 	"path"

@@ -3,8 +3,8 @@ package main
 import (
 	. "ccg-api/init"
 	"context"
-	"github.com/gola-glitch/gola-utils/logging"
-	"github.com/gola-glitch/gola-utils/tracing"
+	"github.com/inclusi-blog/gola-utils/logging"
+	"github.com/inclusi-blog/gola-utils/tracing"
 	"net/http"
 	"strings"
 )
