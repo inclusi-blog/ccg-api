@@ -10,8 +10,6 @@ metadata:
     cert-manager.io/issuer: "letsencrypt-nginx"
     nginx.ingress.kubernetes.io/service-upstream: "true"
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      proxy_cache gola_cache;
-      add_header X-Cache-Status $upstream_cache_status;
       add_header X-Content-Type-Options nosniff;
       add_header "X-XSS-Protection" "1;mode=block";
       if ($http_origin ~* (^https?://([^/]+\.)*({{ .Values.ingress.allowedOrigins }}))) {
