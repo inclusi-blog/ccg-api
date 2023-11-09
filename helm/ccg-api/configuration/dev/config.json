@@ -5,12 +5,12 @@
   "email": {
     "smtp_host": "smtp-relay.sendinblue.com",
     "smtp_port": 587,
-    "username": "golagolampmp@gmail.com",
+    "username": "harishsivakumar97@gmail.com",
     "insecure_skip_verify": true,
     "valid_mensuvadi_email_domains": [
-      "gola.xyz"
+      "narratenet.com"
     ],
-    "default_mensuvadi_email_sender": "gola@gola.xyz",
+    "default_mensuvadi_email_sender": "support@narratenet.com",
     "unsupported_attachment_extensions": [
       "exe"
     ],
